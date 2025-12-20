@@ -6,7 +6,7 @@ import (
 	"github.com/Samathingamajig/aoc2025/registry"
 )
 
-func SolutionA(input string) (string, error) {
+func SolutionA(input string, isExample bool) (string, error) {
 	// splitLines := strings.Split(input, "\n")
 
 	return "", fmt.Errorf("Not implemented")

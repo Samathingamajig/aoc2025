@@ -74,7 +74,7 @@ func runner(day int, part registry.Part, solutionFunc registry.SolutionFunc, run
 
 	if runExample {
 		fmt.Println("Runing example...")
-		answer, err := solutionFunc(exampleInput)
+		answer, err := solutionFunc(exampleInput, true)
 		if err != nil {
 			fmt.Println("❌ Error while running example:")
 			fmt.Println(err)
@@ -95,7 +95,7 @@ func runner(day int, part registry.Part, solutionFunc registry.SolutionFunc, run
 
 	if runReal {
 		fmt.Println("Runing real...")
-		answer, err := solutionFunc(realInput)
+		answer, err := solutionFunc(realInput, false)
 		if err != nil {
 			fmt.Println("❌ Error while running example:")
 			fmt.Println(err)

@@ -9,7 +9,7 @@ const (
 	B Part = "b"
 )
 
-type SolutionFunc func(input string) (string, error)
+type SolutionFunc func(input string, isExample bool) (string, error)
 
 var sols = map[int]map[Part]SolutionFunc{}
 

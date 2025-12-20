@@ -15,7 +15,7 @@ import (
 // 	max int
 // }
 
-func SolutionB(input string) (string, error) {
+func SolutionB(input string, isExample bool) (string, error) {
 	sections := strings.Split(input, "\n\n")
 	if len(sections) != 2 {
 		return "", fmt.Errorf("expected 2 sections")

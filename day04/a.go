@@ -8,7 +8,7 @@ import (
 	"github.com/Samathingamajig/aoc2025/registry"
 )
 
-func SolutionA(input string) (string, error) {
+func SolutionA(input string, isExample bool) (string, error) {
 	grid := strings.Split(input, "\n")
 	grid = append([]string{strings.Repeat(".", len(grid[0]))}, grid...)
 	grid = append(grid, strings.Repeat(".", len(grid[0])))

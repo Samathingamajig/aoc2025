@@ -8,7 +8,7 @@ import (
 	"github.com/Samathingamajig/aoc2025/registry"
 )
 
-func SolutionB(input string) (string, error) {
+func SolutionB(input string, isExample bool) (string, error) {
 	splitLines := strings.Split(input, "\n")
 
 	count := 0

@@ -7,7 +7,7 @@ import (
 	"github.com/Samathingamajig/aoc2025/utils"
 )
 
-func SolutionB(input string) (string, error) {
+func SolutionB(input string, isExample bool) (string, error) {
 	type cell struct {
 		row        int
 		col        int

@@ -7,7 +7,7 @@ import (
 	"github.com/Samathingamajig/aoc2025/registry"
 )
 
-func SolutionA(input string) (string, error) {
+func SolutionA(input string, isExample bool) (string, error) {
 	sums := make([]int, 0)
 	products := make([]int, 0)
 	result := 0

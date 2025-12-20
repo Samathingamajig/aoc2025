@@ -9,10 +9,10 @@ import (
 	"github.com/Samathingamajig/aoc2025/registry"
 )
 
-func SolutionA(input string) (string, error) {
+func SolutionA(input string, isExample bool) (string, error) {
 	numPairs := 1000
 	// Fewer pairs when doing shortest path
-	if len(input) < 250 {
+	if isExample {
 		numPairs = 10
 	}
 

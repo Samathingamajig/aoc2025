@@ -13,7 +13,7 @@ type idRange struct {
 	max int
 }
 
-func SolutionA(input string) (string, error) {
+func SolutionA(input string, isExample bool) (string, error) {
 	sections := strings.Split(input, "\n\n")
 	if len(sections) != 2 {
 		return "", fmt.Errorf("expected 2 sections")
