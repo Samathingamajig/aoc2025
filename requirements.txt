@@ -1,0 +1,2 @@
+# tested with python 3.14.2
+z3-solver==4.15.4.0
