@@ -27,3 +27,10 @@ func Bool2int(b bool) int {
 	}
 	return i
 }
+
+func AbsInt(x int) int {
+	if x < 0 {
+		return -x
+	}
+	return x
+}
