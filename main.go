@@ -1,9 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"log"
 	"os"
+	"path"
 	"strconv"
 	"strings"
 
@@ -48,7 +50,20 @@ func main() {
 
 func runner(day int, part registry.Part, solutionFunc registry.SolutionFunc, runExample, runReal bool) {
 	paddedDay := fmt.Sprintf("day%02d", day)
-	exampleInput := strings.TrimRight(utils.ReadFilePanic(paddedDay, "example.input.txt"), "\n")
+	exampleInputRaw, err := os.ReadFile(path.Join(paddedDay, fmt.Sprintf("%s.example.input.txt", part)))
+	if err != nil {
+		if errors.Is(err, os.ErrNotExist) {
+			exampleInputRaw, err = os.ReadFile(path.Join(paddedDay, "example.input.txt"))
+			if err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
+		} else {
+			fmt.Println(err)
+			os.Exit(1)
+		}
+	}
+	exampleInput := strings.TrimRight(string(exampleInputRaw), "\n")
 	exampleOutput := strings.TrimRight(utils.ReadFilePanic(paddedDay, fmt.Sprintf("%s.example.output.txt", part)), "\n")
 	realInput := strings.TrimRight(utils.ReadFilePanic(paddedDay, "input.txt"), "\n")
 
